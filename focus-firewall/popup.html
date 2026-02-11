@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focus Firewall</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup-container">
+
+    <!-- Animated background particles -->
+    <div class="bg-particles">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+
+    <!-- Header -->
+    <header class="popup-header">
+      <div class="logo-section">
+        <div class="shield-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" 
+                  fill="url(#shieldGrad)" opacity="0.9"/>
+            <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" 
+                  fill="none" stroke="url(#shieldStroke)" stroke-width="1.5"/>
+            <path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="shieldGrad" x1="3" y1="2" x2="21" y2="19">
+                <stop offset="0%" stop-color="#2196F3"/>
+                <stop offset="100%" stop-color="#0D47A1"/>
+              </linearGradient>
+              <linearGradient id="shieldStroke" x1="3" y1="2" x2="21" y2="19">
+                <stop offset="0%" stop-color="#64B5F6"/>
+                <stop offset="100%" stop-color="#1565C0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="title-group">
+          <h1>FOCUS</h1>
+          <span class="subtitle">FIREWALL</span>
+        </div>
+      </div>
+      <p class="tagline">Eliminate Distractions. Stay Locked In.</p>
+    </header>
+
+    <!-- Toggle Section -->
+    <div class="toggle-section">
+      <div class="toggle-row">
+        <div class="toggle-label">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="statusText">Protection Active</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggleSwitch" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Goal Input Section -->
+    <div class="goal-section">
+      <label class="input-label" for="goalInput">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="vertical-align: middle; margin-right: 6px;">
+          <circle cx="12" cy="12" r="10" stroke="#64B5F6" stroke-width="2"/>
+          <circle cx="12" cy="12" r="6" stroke="#64B5F6" stroke-width="2"/>
+          <circle cx="12" cy="12" r="2" fill="#2196F3"/>
+        </svg>
+        Current Focus Goal
+      </label>
+      <div class="input-wrapper">
+        <input 
+          type="text" 
+          id="goalInput" 
+          placeholder="e.g., Studying Graph Theory"
+          spellcheck="false"
+          autocomplete="off"
+        />
+        <button id="clearGoal" class="clear-btn" title="Clear goal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <button id="saveGoal" class="save-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align: middle; margin-right: 6px;">
+          <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Lock In Goal
+      </button>
+    </div>
+
+    <!-- Active Goal Display -->
+    <div class="active-goal-section" id="activeGoalSection" style="display: none;">
+      <div class="active-goal-card">
+        <div class="goal-badge">LOCKED IN</div>
+        <p class="active-goal-text" id="activeGoalText"></p>
+      </div>
+    </div>
+
+    <!-- Protection Stats -->
+    <div class="stats-section">
+      <div class="stat-item">
+        <div class="stat-icon youtube-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/>
+          </svg>
+        </div>
+        <span class="stat-label">YouTube filtered</span>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon social-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+        </div>
+        <span class="stat-label">Social media guarded</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="popup-footer">
+      <span>Focus Firewall v1.0</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

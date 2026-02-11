@@ -1,0 +1,29 @@
+/* ============================================
+   Focus Firewall — Modal Stylesheet
+   Fallback styles for social media modal.
+   Primary styling is in Shadow DOM (social.js),
+   this file provides base resets only.
+   ============================================ */
+
+/*
+ * Since the modal is rendered inside a Shadow DOM
+ * for complete CSS isolation, this file serves as
+ * a minimal safety net and can be extended if needed
+ * for non-shadow-DOM scenarios.
+ */
+
+/* Ensure the host container doesn't interfere with page layout */
+#ff-social-host {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 2147483647 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
